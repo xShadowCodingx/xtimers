@@ -179,7 +179,7 @@ function App() {
   }
 
   function returnFullURL() {
-    return `${baseUrl}?a=${removeHashMark(backgroundColor)}&b=${removeHashMark(textColor)}${timerHeader != "" ? "&c=" + timerHeader.replace(/[^a-zA-Z0-9!.]/g, '') : ""}${timerText != "" ? "&d=" + timerText.replace(/[^a-zA-Z0-9!.]/g, '') : ""}${urlLogo != "" ? "&e=" + urlLogo : ""}${timerDate != "" ? "&date=" + formatTimerDate(timerDate) : ""}${returnOptionsURLParameter()}`
+    return `${baseUrl}?a=${removeHashMark(backgroundColor)}&b=${removeHashMark(textColor)}${timerHeader != "" ? "&c=" + timerHeader.replace(/[^a-zA-Z0-9\s!.]/g, '') : ""}${timerText != "" ? "&d=" + timerText.replace(/[^a-zA-Z0-9\s!.]/g, '') : ""}${urlLogo != "" ? "&e=" + urlLogo : ""}${timerDate != "" ? "&date=" + formatTimerDate(timerDate) : ""}${returnOptionsURLParameter()}`
   }
 
   const URLString = returnFullURL();
