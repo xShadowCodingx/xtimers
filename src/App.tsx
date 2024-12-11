@@ -204,7 +204,12 @@ function App() {
   else {
     return (
       <>
-        <Row className='text-center g-0' style={{ marginTop: '3rem' }}>
+        <Row className='text-center g-0'>
+          <div className='text-center mb-4'>
+            <div style={{background: "radial-gradient(circle, rgba(0,0,0,1) 31%, rgba(155,155,155,1) 70%, rgba(255,255,255,1) 90%)", height: "100%", padding: "2rem"}}>
+              <img src="/xtimers_logo.png" alt="xTimers Logo" style={{ maxWidth: "300px", height: "auto", display: 'inline-block'}} />
+            </div>
+          </div>
           <h1>xTimers by ShadowCoding</h1>
           <p>Easily create and display a timer anywhere you can use a browser!<br />The link automatically generates at the bottom of the page. Just copy and paste it into your URL bar!</p>
         </Row>
