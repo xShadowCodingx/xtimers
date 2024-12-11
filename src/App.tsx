@@ -23,7 +23,7 @@ import Heart from './assets/heart.png';
 import Balloons from './assets/balloons.png';
 
 // Set base URL
-const baseUrl = "localhost:3000";
+const baseUrl = "xtimers.shadowcoding.com";
 
 // URL PARAMETERS
 /*
