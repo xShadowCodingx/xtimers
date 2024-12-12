@@ -58,21 +58,21 @@ export default function CreateTimer(props: Props) {
         <div className='text-center g-0' style={{position: 'relative'}}>
             {/* <div style={timerStylingOne}>{days ? days : '00'}:{hours ? hours : '00'}:{minutes ? minutes : '00'}:{seconds ? seconds : '00'}</div> */}
             <Row className={`justify-content-center g-0 ${props.timerStyle} ${props.timerFont}`}>
-                <div className="col-2" style={{border: '10px solid', borderTopLeftRadius: '15px', borderBottomLeftRadius: '15px'}}>
-                    <p style={{fontSize: "150pt", marginBottom: "-5px"}}>{days ? days : '00'}</p>
-                    <p style={{fontSize: "20pt"}}>Days</p>
+                <div className="col-lg-2 col-5 timer-cell-left" style={{border: '10px solid', borderTopLeftRadius: '15px', borderBottomLeftRadius: '15px'}}>
+                    <p className="timer-cell-number">{days ? days : '00'}</p>
+                    <p className="timer-cell-text">Days</p>
                 </div>
-                <div className="col-2" style={{borderTop: '10px solid', borderBottom: '10px solid', borderRight: '10px solid'}}>
-                    <p style={{fontSize: "150pt", marginBottom: "-5px"}}>{hours ? hours : '00'}</p>
-                    <p style={{fontSize: "20pt"}}>Hours</p>
+                <div className="col-lg-2 col-5 timer-cell-middle-left" style={{borderTop: '10px solid', borderBottom: '10px solid', borderRight: '10px solid'}}>
+                    <p className="timer-cell-number">{hours ? hours : '00'}</p>
+                    <p className="timer-cell-text">Hours</p>
                 </div>
-                <div className="col-2" style={{borderTop: '10px solid', borderBottom: '10px solid', borderRight: '10px solid'}}>
-                    <p style={{fontSize: "150pt", marginBottom: "-5px"}}>{minutes ? minutes : '00'}</p>
-                    <p style={{fontSize: "20pt"}}>Minutes</p>
+                <div className="col-lg-2 col-5 timer-cell-middle-right" style={{borderTop: '10px solid', borderBottom: '10px solid', borderRight: '10px solid'}}>
+                    <p className="timer-cell-number">{minutes ? minutes : '00'}</p>
+                    <p className="timer-cell-text">Minutes</p>
                 </div>
-                <div className="col-2" style={{borderTop: '10px solid', borderBottom: '10px solid', borderRight: '10px solid', borderTopRightRadius: '15px', borderBottomRightRadius: '15px'}}>
-                    <p style={{fontSize: "150pt", marginBottom: "-5px"}}>{seconds ? seconds : '00'}</p>
-                    <p style={{fontSize: "20pt"}}>Seconds</p>
+                <div className="col-lg-2 col-5 timer-cell-right" style={{borderTop: '10px solid', borderBottom: '10px solid', borderRight: '10px solid', borderTopRightRadius: '15px', borderBottomRightRadius: '15px'}}>
+                    <p className="timer-cell-number">{seconds ? seconds : '00'}</p>
+                    <p className="timer-cell-text">Seconds</p>
                 </div>
             </Row>
             {props.children}

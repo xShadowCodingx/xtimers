@@ -1,8 +1,130 @@
 /* global css file */
-body {
+body, html {
     margin: 0;
     padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
 }
+
+.xtimers-logo {
+    max-width: 300px;
+    height: auto;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 575px) {
+    body {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .xtimers-logo {
+        width: 60vw;
+    }
+}
+
+.timer-cell-number {
+    font-size: 92pt;
+    margin-bottom: -5px;
+}
+
+.timer-emblem {
+    position: absolute;
+    bottom: 0;
+    left: 16.7%;
+    transform: translate(-50%, 30%);
+    height: 100px;
+}
+
+@media only screen and (max-width: 992px) {
+    .timer-cell-left{
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom: none !important;
+    }
+    .timer-cell-middle-left{
+        border-bottom: none !important;
+    }
+    .timer-cell-middle-right{
+        border-left: 10px solid;
+    }
+    .timer-cell-right{
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+    .timer-emblem {
+        left: 10.7% !important;
+    }
+}
+
+@media only screen and (max-width: 432px) {
+    .timer-cell-number {
+        font-size: 50pt;
+    }
+}
+
+/* {fontSize: "150pt", marginBottom: "-5px"} */
+@media only screen and (min-width: 1436px) {
+    .timer-cell-number {
+        font-size: 150pt;
+        margin-bottom: -5px;
+    }
+
+    .timer-emblem {
+        /* {{position: 'absolute', bottom: '0', left: '16.7%', transform: "translate(-50%, 30%)"}} */
+        position: absolute;
+        bottom: 0;
+        left: 16.7%;
+        transform: translate(-50%, 30%);
+        height: 250px;
+    }
+}
+
+.timer-header {
+    font-size: 70pt;
+}
+
+.timer-text {
+    font-size: 50pt;
+}
+
+@media only screen and (max-width: 991px) {
+    .timer-header {
+        font-size: 50pt;
+    }
+    .timer-text {
+        font-size: 45pt;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .timer-header {
+        font-size: 40pt;
+    }
+    .timer-text {
+        font-size: 35pt;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .timer-header {
+        font-size: 30pt;
+    }
+    .timer-text {
+        font-size: 25pt;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .timer-header {
+        font-size: 20pt;
+    }
+    .timer-text {
+        font-size: 15pt;
+    }
+}
+
 
 /* Fonts */
 .arial-font{

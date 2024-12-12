@@ -10,12 +10,11 @@ export default function SetText(props: Props) {
 
     const TextStylingOne = {
         color: "#" + props.textColor,
-        fontSize: "80px"
     }
 
     return (
         <Row className='text-center g-0' style={TextStylingOne}>
-            <p className={props.textFont}>{props.text ? props.text : ""}</p>
+            <p className={`${props.textFont} timer-text`}>{props.text ? props.text : ""}</p>
         </Row>
     )
 }

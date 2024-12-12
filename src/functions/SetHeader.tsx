@@ -10,12 +10,11 @@ export default function SetHeader(props: Props) {
 
     const HeaderStylingOne = {
         color: "#" + props.headerColor,
-        fontSize: "100px"
     }
 
     return (
         <Row className='text-center g-0 mt-2 mb-4'>
-            <h2 style={HeaderStylingOne} className={props.headerFont}>{props.header ? props.header : ""}</h2>
+            <h2 style={HeaderStylingOne} className={`${props.headerFont} timer-header`}>{props.header ? props.header : ""}</h2>
         </Row>
     )
 }

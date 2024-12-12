@@ -9,7 +9,7 @@ export default function SetPage(props: Props) {
         height: "100vh",
         width: "100vw",
         backgroundColor: "#" + props.backgroundColor,
-        overflow: "hidden"
+        overflowX: "hidden"
     }
 
     return (

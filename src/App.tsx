@@ -204,28 +204,28 @@ function App() {
   else {
     return (
       <>
-        <Row className='text-center g-0'>
+        <Row className='justify-content-center text-center g-0'>
           <div className='text-center mb-4'>
             <div style={{background: "radial-gradient(circle, rgba(0,0,0,1) 31%, rgba(155,155,155,1) 70%, rgba(255,255,255,1) 90%)", height: "100%", padding: "2rem"}}>
-              <img src="/xtimers_logo.png" alt="xTimers Logo" style={{ maxWidth: "300px", height: "auto", display: 'inline-block'}} />
+              <img src="/xtimers_logo.png" alt="xTimers Logo" className='xtimers-logo' />
             </div>
           </div>
-          <h1>xTimers by ShadowCoding</h1>
-          <p>Easily create and display a timer anywhere you can use a browser!<br />The link automatically generates at the bottom of the page. Just copy and paste it into your URL bar!</p>
+          <h1 className='verdana-font'>xTimers by ShadowCoding</h1>
+          <p className='times-new-roman-font'>Easily create and display a timer anywhere you can use a browser! The link automatically generates at the bottom of the page. Just copy and paste it into your URL bar!</p>
         </Row>
         <Row className='g-0 justify-content-center' style={{ marginTop: '3rem' }}>
           <div className='col-lg-6 col-md-8 col-sm-10 col-12'>
             <form>
               <Form.Group className="mb-3" controlId="LogoURL">
                 <Form.Label><b>URL to Your Logo</b> <i style={{ color: "grey" }}>*optional</i></Form.Label>
-                <Form.Control type="text" placeholder="Enter logo URL" onChange={(e) => setUrlLogo(e.target.value)} />
+                <Form.Control type="text" className='col-lg-12 col-11' placeholder="Enter logo URL" onChange={(e) => setUrlLogo(e.target.value)} />
               </Form.Group>
               <Row className='justify-content-between g-0'>
-                <Form.Group className="mb-3 col-6" controlId="Header">
+                <Form.Group className="mb-3 col-md-6 col-11" controlId="Header">
                   <Form.Label><b>What Header Would You Like Shown?</b> <i style={{ color: "grey" }}>*optional</i></Form.Label>
                   <Form.Control type="text" placeholder="Enter Header Text" onChange={(e) => setTimerHeader(e.target.value)} />
                 </Form.Group>
-                <Form.Group className="mb-3 col-5" controlId="HeaderFont">
+                <Form.Group className="mb-3 col-md-5 col-11" controlId="HeaderFont">
                   <Form.Label><b>What Font For the Header?</b> <i style={{ color: "grey" }}>*optional</i></Form.Label>
                   <Form.Select aria-label="Header Font" onChange={(e) => setTimerHeaderFont(e.target.value)}>
                     <option>Choose a Font</option>
@@ -239,11 +239,11 @@ function App() {
               </Row>
 
               <Row className='justify-content-between g-0'>
-                <Form.Group className="mb-3 col-6" controlId="SubHeader">
+                <Form.Group className="mb-3 col-md-6 col-11" controlId="SubHeader">
                   <Form.Label><b>What Text Would You Like Shown Below the Timer?</b> <i style={{ color: "grey" }}>*optional</i></Form.Label>
                   <Form.Control type="text" placeholder="Enter Text" onChange={(e) => setTimerText(e.target.value)} />
                 </Form.Group>
-                <Form.Group className="mb-3 col-5" controlId="SubHeaderFont">
+                <Form.Group className="mb-3 col-md-5 col-11" controlId="SubHeaderFont">
                   <Form.Label><b>What Font For the Text?</b> <i style={{ color: "grey" }}>*optional</i></Form.Label>
                   <Form.Select aria-label="Text Font" onChange={(e) => setTimerTextFont(e.target.value)}>
                     <option value="0">Choose a Font</option>
@@ -257,7 +257,7 @@ function App() {
               </Row>
 
               <Row className='justify-content-between g-0'>
-                <Form.Group className="mb-3 col-5" controlId="TimerFont">
+                <Form.Group className="mb-3 col-md-5 col-11" controlId="TimerFont">
                   <Form.Label><b>What Font For the Timer?</b> <i style={{ color: "grey" }}>*optional</i></Form.Label>
                   <Form.Select aria-label="Timer Font" onChange={(e) => setTimerFont(e.target.value)}>
                     <option value="0">Choose a Font</option>
@@ -268,7 +268,7 @@ function App() {
                     <option value="5" className='trebuchet-font'>Trebuchet</option>
                   </Form.Select>
                 </Form.Group>
-                <Form.Group className="mb-3 col-6" controlId="Emblem">
+                <Form.Group className="mb-3 col-md-6 col-11" controlId="Emblem">
                   <Form.Label><b>Would you like to show an emblem on the timer?</b></Form.Label>
                   <Form.Select aria-label="Timer Emblem" onChange={(e) => setTimerEmblem(e.target.value)}>
                     <option value="0">No</option>
@@ -283,12 +283,12 @@ function App() {
               </Row>
 
               <Row className='justify-content-center g-0'>
-                <Form.Group className="mb-3 col-6" controlId="BackgroundColor">
+                <Form.Group className="mb-3 col-xxl-5 col-11" controlId="BackgroundColor">
                   <Form.Label><b>Choose your Background Color:</b></Form.Label>
                   <div style={{ height: "30px", width: "100px", border: "1px solid black", backgroundColor: backgroundColor, marginBottom: "10px" }}></div>
                   <SwatchesPicker color={backgroundColor} onChangeComplete={handleBackgroundColorChange} />
                 </Form.Group>
-                <Form.Group className="mb-3 col-6" controlId="TextColor">
+                <Form.Group className="mb-3 col-xxl-5 col-11" controlId="TextColor">
                   <Form.Label><b>Choose your Text Color:</b></Form.Label>
                   <div style={{ height: "30px", width: "100px", border: "1px solid black", backgroundColor: textColor, marginBottom: "10px" }}></div>
                   <SwatchesPicker color={textColor} onChangeComplete={handleTextColorChange} />
@@ -296,11 +296,11 @@ function App() {
               </Row>
 
               <Row className='justify-content-between g-0'>
-                <Form.Group className="mb-3 col-6" controlId="DatePicker">
+                <Form.Group className="mb-3 col-md-6 col-11" controlId="DatePicker">
                   <Form.Label><b>What Date are we counting down to?</b></Form.Label>
                   <Form.Control type="date" value={timerDate} onChange={(e) => setTimerDate(e.target.value)} />
                 </Form.Group>
-                <Form.Group className="mb-3 col-5" controlId="Emblem">
+                <Form.Group className="mb-3 col-md-5 col-11" controlId="Emblem">
                   <Form.Label><b>What Timer Style?</b></Form.Label>
                   <Form.Select aria-label="Timer Style" onChange={(e) => setTimerStyleOption(e.target.value)}>
                     <option value="1">Standard</option>
