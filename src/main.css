@@ -4,12 +4,17 @@ body, html {
     padding: 0;
     width: 100vw;
     overflow-x: hidden;
+    background: rgb(142,156,224);
+    background: linear-gradient(90deg, rgba(142,156,224,1) 23%, rgba(148,150,181,1) 35%, rgba(168,194,222,1) 66%);
 }
 
 .xtimers-logo {
     max-width: 300px;
     height: auto;
     display: inline-block;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
 }
 
 @media only screen and (max-width: 575px) {

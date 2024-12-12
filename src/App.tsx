@@ -206,7 +206,7 @@ function App() {
       <>
         <Row className='justify-content-center text-center g-0'>
           <div className='text-center mb-4'>
-            <div style={{background: "radial-gradient(circle, rgba(0,0,0,1) 31%, rgba(155,155,155,1) 70%, rgba(255,255,255,1) 90%)", height: "100%", padding: "2rem"}}>
+            <div style={{height: "100%", padding: "2rem"}}>
               <img src="/xtimers_logo.png" alt="xTimers Logo" className='xtimers-logo' />
             </div>
           </div>
