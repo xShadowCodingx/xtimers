@@ -44,7 +44,7 @@ export default function TimerSetupForm(props: Props) {
         <>
             <TimerSetupFormHeader />
             <Row className='g-0 justify-content-center timer-setup-form'>
-                <div className='col-lg-6 col-md-8 col-sm-10 col-12'>
+                <div className='col-lg-6 col-11 timer-setup-form-container'>
                     <form>
                         <TimerSetupFormLogoSettings
                             setUrlLogo={props.setUrlLogo}
