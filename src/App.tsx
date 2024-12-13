@@ -17,7 +17,7 @@ import xTimerFunctions from './functions';
 const xtf = new xTimerFunctions();
 
 // Import Timer Setup Form
-import TimerSetupForm from './components/timerSetupForm.tsx/timerSetupForm';
+import TimerSetupForm from './components/timerSetupForm/TimerSetupForm';
 
 import SetPage from './components/SetPage';
 import SetHeader from './components/SetHeader';
