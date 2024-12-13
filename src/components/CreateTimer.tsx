@@ -35,7 +35,7 @@ export default function CreateTimer(props: Props) {
             const hoursLeft = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutesLeft = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             const secondsLeft = Math.floor((difference % (1000 * 60)) / 1000);
-            
+
             // If the days, hours, minutes, or seconds are less than 10, add a 0 in front to make it two digits
             if (daysLeft < 10) {
                 setDays('0' + daysLeft.toString());
@@ -68,22 +68,21 @@ export default function CreateTimer(props: Props) {
     }, [props.date]);
 
     return (
-        <div className='text-center g-0' style={{position: 'relative'}}>
-            {/* <div style={timerStylingOne}>{days ? days : '00'}:{hours ? hours : '00'}:{minutes ? minutes : '00'}:{seconds ? seconds : '00'}</div> */}
+        <div className='text-center g-0 timer-pos-relative'>
             <Row className={`justify-content-center g-0 ${props.timerStyle} ${props.timerFont}`}>
-                <div className="col-lg-2 col-5 timer-cell-left" style={{border: '10px solid', borderTopLeftRadius: '15px', borderBottomLeftRadius: '15px'}}>
+                <div className="col-lg-2 col-5 timer-cell-left">
                     <p className="timer-cell-number">{days ? days : '00'}</p>
                     <p className="timer-cell-text">Days</p>
                 </div>
-                <div className="col-lg-2 col-5 timer-cell-middle-left" style={{borderTop: '10px solid', borderBottom: '10px solid', borderRight: '10px solid'}}>
+                <div className="col-lg-2 col-5 timer-cell-middle-left">
                     <p className="timer-cell-number">{hours ? hours : '00'}</p>
                     <p className="timer-cell-text">Hours</p>
                 </div>
-                <div className="col-lg-2 col-5 timer-cell-middle-right" style={{borderTop: '10px solid', borderBottom: '10px solid', borderRight: '10px solid'}}>
+                <div className="col-lg-2 col-5 timer-cell-middle-right">
                     <p className="timer-cell-number">{minutes ? minutes : '00'}</p>
                     <p className="timer-cell-text">Minutes</p>
                 </div>
-                <div className="col-lg-2 col-5 timer-cell-right" style={{borderTop: '10px solid', borderBottom: '10px solid', borderRight: '10px solid', borderTopRightRadius: '15px', borderBottomRightRadius: '15px'}}>
+                <div className="col-lg-2 col-5 timer-cell-right">
                     <p className="timer-cell-number">{seconds ? seconds : '00'}</p>
                     <p className="timer-cell-text">Seconds</p>
                 </div>

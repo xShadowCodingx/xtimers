@@ -1,12 +1,70 @@
-/* global css file for xTimers */
+/* ************************************************ */
+/*                              Author: Chase Quinn */
+/*                                 Date: 12/13/2024 */
+/* ************************************************ */
+/*                      Global CSS File for xTimers */
+/* ************************************************ */
+/* ******************************************************************************************** */
 
-body, html {
+/* ################################# */
+/*                       Body / HTML */
+/* ################################# */
+
+body,
+html {
     margin: 0;
     padding: 0;
     width: 100vw;
     overflow-x: hidden;
-    background: rgb(142,156,224);
-    background: linear-gradient(90deg, rgba(142,156,224,1) 23%, rgba(148,150,181,1) 35%, rgba(168,194,222,1) 66%);
+    background: rgb(142, 156, 224);
+    background: linear-gradient(90deg, rgba(142, 156, 224, 1) 23%, rgba(148, 150, 181, 1) 35%, rgba(168, 194, 222, 1) 66%);
+}
+
+/* ################################# */
+/*                             Fonts */
+/* ################################# */
+
+.arial-font {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.cambria-font {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+
+.verdana-font {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.times-new-roman-font {
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.trebuchet-font {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+}
+
+/* ################################# */
+/*                  Timer Setup Form */
+/* ################################# */
+
+.timer-setup-form {
+    margin-top: 3rem;
+}
+
+.timer-setup-form-color-containers {
+    height: 30px;
+    width: 100px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.timer-setup-form-optional-grey {
+    color: rgb(63, 63, 63);
+}
+
+.timer-setup-form-link-button {
+    width: 200px;
 }
 
 .xtimers-logo {
@@ -18,16 +76,19 @@ body, html {
     border-radius: 50%;
 }
 
-@media only screen and (max-width: 575px) {
-    body {
-        padding: 10px;
-    }
+/* ################################# */
+/*                             Timer */
+/* ################################# */
+
+.xtimer-page {
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
-@media only screen and (max-width: 390px) {
-    .xtimers-logo {
-        width: 60vw;
-    }
+.timer-logo {
+    width: 250px;
+    max-width: 90vw;
 }
 
 .timer-cell-number {
@@ -43,22 +104,105 @@ body, html {
     height: 100px;
 }
 
+.timer-header {
+    font-size: 70pt;
+}
+
+.timer-text {
+    font-size: 50pt;
+}
+
+.timer-pos-relative {
+    position: relative;
+}
+
+.timer-cell-left {
+    border: 10px solid;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.timer-cell-middle-left {
+    border-top: 10px solid;
+    border-bottom: 10px solid;
+    border-right: 10px solid;
+}
+
+.timer-cell-middle-right {
+    border-top: 10px solid;
+    border-bottom: 10px solid;
+    border-right: 10px solid;
+}
+
+.timer-cell-right{
+    border-top: 10px solid;
+    border-bottom: 10px solid;
+    border-right: 10px solid;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Timer 1 Style - Standard */
+.timer1 div {
+    border-color: rgb(68, 68, 75) !important;
+    background-color: rgb(236, 235, 231);
+    box-shadow: inset 15px 0 20px -5px rgb(184, 184, 184), inset -14px 0 20px -5px rgb(184, 184, 184);
+}
+
+/* Timer 2 Style - Festive */
+.timer2 div {
+    border-color: rgb(31, 177, 43) !important;
+    background-color: rgb(248, 7, 7);
+    box-shadow: inset 15px 0 20px -5px rgb(233, 233, 233), inset -14px 0 20px -5px rgb(233, 233, 233);
+}
+
+/* Timer 3 Style - Blues */
+.timer3 div {
+    border-color: rgb(76, 89, 151) !important;
+    background-color: rgb(91, 187, 190);
+    box-shadow: inset 15px 0 20px -5px rgb(168, 156, 211), inset -14px 0 20px -5px rgb(168, 156, 211);
+}
+
+/* Timer 4 Style - New Year */
+.timer4 div {
+    border-color: rgb(102, 104, 6) !important;
+    background-color: rgb(240, 200, 68);
+    box-shadow: inset 15px 0 20px -5px rgb(203, 204, 120), inset -14px 0 20px -5px rgb(203, 204, 120);
+}
+
+/* Media Queries for Timer */
+@media only screen and (max-width: 575px) {
+    .xtimer-page {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .xtimers-logo {
+        width: 60vw;
+    }
+}
+
 @media only screen and (max-width: 992px) {
-    .timer-cell-left{
+    .timer-cell-left {
         border-top-left-radius: 0px !important;
         border-bottom-left-radius: 0px !important;
         border-bottom: none !important;
     }
-    .timer-cell-middle-left{
+
+    .timer-cell-middle-left {
         border-bottom: none !important;
     }
-    .timer-cell-middle-right{
+
+    .timer-cell-middle-right {
         border-left: 10px solid;
     }
-    .timer-cell-right{
+
+    .timer-cell-right {
         border-top-right-radius: 0px !important;
         border-bottom-right-radius: 0px !important;
     }
+
     .timer-emblem {
         left: 10.7% !important;
     }
@@ -70,7 +214,6 @@ body, html {
     }
 }
 
-/* {fontSize: "150pt", marginBottom: "-5px"} */
 @media only screen and (min-width: 1436px) {
     .timer-cell-number {
         font-size: 150pt;
@@ -78,7 +221,6 @@ body, html {
     }
 
     .timer-emblem {
-        /* {{position: 'absolute', bottom: '0', left: '16.7%', transform: "translate(-50%, 30%)"}} */
         position: absolute;
         bottom: 0;
         left: 16.7%;
@@ -87,18 +229,11 @@ body, html {
     }
 }
 
-.timer-header {
-    font-size: 70pt;
-}
-
-.timer-text {
-    font-size: 50pt;
-}
-
 @media only screen and (max-width: 991px) {
     .timer-header {
         font-size: 50pt;
     }
+
     .timer-text {
         font-size: 45pt;
     }
@@ -108,6 +243,7 @@ body, html {
     .timer-header {
         font-size: 40pt;
     }
+
     .timer-text {
         font-size: 35pt;
     }
@@ -117,6 +253,7 @@ body, html {
     .timer-header {
         font-size: 30pt;
     }
+
     .timer-text {
         font-size: 25pt;
     }
@@ -126,59 +263,8 @@ body, html {
     .timer-header {
         font-size: 20pt;
     }
+
     .timer-text {
         font-size: 15pt;
     }
-}
-
-
-/* Fonts */
-.arial-font{
-    font-family: Arial, Helvetica, sans-serif !important;
-}
-
-.cambria-font {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-}
-
-.verdana-font {
-    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
-}
-
-.times-new-roman-font{
-    font-family: 'Times New Roman', Times, serif !important;
-}
-
-.trebuchet-font{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-}
-
-/* Timers */
-
-/* Timer 1 - std */
-.timer1 div {
-    border-color: rgb(68, 68, 75) !important;
-    background-color: rgb(236, 235, 231);
-    box-shadow: inset 15px 0 20px -5px rgb(184, 184, 184), inset -14px 0 20px -5px rgb(184, 184, 184);
-}
-
-/* Timer 2 - xmas */
-.timer2 div {
-    border-color: rgb(31, 177, 43) !important;
-    background-color: rgb(248, 7, 7);
-    box-shadow: inset 15px 0 20px -5px rgb(233, 233, 233), inset -14px 0 20px -5px rgb(233, 233, 233);
-}
-
-/* Timer 3 - blues */
-.timer3 div {
-    border-color: rgb(76, 89, 151) !important;
-    background-color: rgb(91, 187, 190);
-    box-shadow: inset 15px 0 20px -5px rgb(168, 156, 211), inset -14px 0 20px -5px rgb(168, 156, 211);
-}
-
-/* Timer 4 - New Years */
-.timer4 div {
-    border-color: rgb(102, 104, 6) !important;
-    background-color: rgb(240, 200, 68);
-    box-shadow: inset 15px 0 20px -5px rgb(203, 204, 120), inset -14px 0 20px -5px rgb(203, 204, 120);
 }

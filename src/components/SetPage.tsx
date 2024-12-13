@@ -13,6 +13,6 @@ interface Props {
 // Export Component
 export default function SetPage(props: Props) {
     return (
-        <div style={{overflowX: "hidden", "height": "100vh", "width": "100vw", "backgroundColor": "#" + props.backgroundColor}}>{props.children}</div>
+        <div className="xtimer-page" style={{ backgroundColor: "#" + props.backgroundColor }}>{props.children}</div>
     );
 };

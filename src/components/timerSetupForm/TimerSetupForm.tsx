@@ -43,7 +43,7 @@ export default function TimerSetupForm(props: Props) {
     return (
         <>
             <TimerSetupFormHeader />
-            <Row className='g-0 justify-content-center' style={{ marginTop: '3rem' }}>
+            <Row className='g-0 justify-content-center timer-setup-form'>
                 <div className='col-lg-6 col-md-8 col-sm-10 col-12'>
                     <form>
                         <TimerSetupFormLogoSettings

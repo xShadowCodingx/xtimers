@@ -19,7 +19,7 @@ export default function TimerSetupFormTimerLink(props: Props) {
             <h3>Use the URL below to see your timer!</h3>
             <p>You can copy the entire URL or click the Copy button</p>
             <Row className='justify-content-evenly g-0'>
-                <button style={{ width: '200px' }} onClick={() => navigator.clipboard.writeText(props.URLString)}>Copy</button>
+                <button className="timer-setup-form-link-button" onClick={() => navigator.clipboard.writeText(props.URLString)}>Copy</button>
             </Row>
             <p className='mt-3'>{props.URLString}</p>
         </Row>

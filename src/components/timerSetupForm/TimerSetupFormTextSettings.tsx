@@ -18,11 +18,11 @@ export default function TimerSetupFormTextSettings(props: Props) {
     return (
         <Row className='justify-content-between g-0'>
             <Form.Group className="mb-3 col-md-6 col-11" controlId="SubHeader">
-                <Form.Label><b>What Text Would You Like Shown Below the Timer?</b> <i style={{ color: "grey" }}>*optional</i></Form.Label>
+                <Form.Label><b>What Text Would You Like Shown Below the Timer?</b> <i className="timer-setup-form-optional-grey">*optional</i></Form.Label>
                 <Form.Control type="text" placeholder="Enter Text" onChange={(e) => props.setTimerText(e.target.value)} />
             </Form.Group>
             <Form.Group className="mb-3 col-md-5 col-11" controlId="SubHeaderFont">
-                <Form.Label><b>What Font For the Text?</b> <i style={{ color: "grey" }}>*optional</i></Form.Label>
+                <Form.Label><b>What Font For the Text?</b> <i className="timer-setup-form-optional-grey">*optional</i></Form.Label>
                 <Form.Select aria-label="Text Font" onChange={(e) => props.setTimerTextFont(e.target.value)}>
                     <option value="0">Choose a Font</option>
                     <option value="1" className='arial-font'>Arial</option>

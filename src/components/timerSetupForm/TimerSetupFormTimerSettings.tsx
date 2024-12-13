@@ -18,7 +18,7 @@ export default function TimerSetupFormTimerSettings(props: Props) {
     return (
         <Row className='justify-content-between g-0'>
             <Form.Group className="mb-3 col-md-5 col-11" controlId="TimerFont">
-                <Form.Label><b>What Font For the Timer?</b> <i style={{ color: "grey" }}>*optional</i></Form.Label>
+                <Form.Label><b>What Font For the Timer?</b> <i className="timer-setup-form-optional-grey">*optional</i></Form.Label>
                 <Form.Select aria-label="Timer Font" onChange={(e) => props.setTimerFont(e.target.value)}>
                     <option value="0">Choose a Font</option>
                     <option value="1" className='arial-font'>Arial</option>

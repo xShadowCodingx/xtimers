@@ -18,11 +18,11 @@ export default function TimerSetupFormHeaderSettings(props: Props) {
     return (
         <Row className='justify-content-between g-0'>
             <Form.Group className="mb-3 col-md-6 col-11" controlId="Header">
-                <Form.Label><b>What Header Would You Like Shown?</b> <i style={{ color: "grey" }}>*optional</i></Form.Label>
+                <Form.Label><b>What Header Would You Like Shown?</b> <i className="timer-setup-form-optional-grey">*optional</i></Form.Label>
                 <Form.Control type="text" placeholder="Enter Header Text" onChange={(e) => props.setTimerHeader(e.target.value)} />
             </Form.Group>
             <Form.Group className="mb-3 col-md-5 col-11" controlId="HeaderFont">
-                <Form.Label><b>What Font For the Header?</b> <i style={{ color: "grey" }}>*optional</i></Form.Label>
+                <Form.Label><b>What Font For the Header?</b> <i className="timer-setup-form-optional-grey">*optional</i></Form.Label>
                 <Form.Select aria-label="Header Font" onChange={(e) => props.setTimerHeaderFont(e.target.value)}>
                     <option>Choose a Font</option>
                     <option value="1" className='arial-font'>Arial</option>

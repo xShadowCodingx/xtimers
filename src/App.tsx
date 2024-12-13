@@ -7,9 +7,6 @@
 // Import Modules
 import { useState } from 'react';
 
-// Import CSS
-import './App.css';
-
 // import Functions
 import xTimerFunctions from './functions';
 
