@@ -24,7 +24,6 @@ export default function CreateTimer(props: Props) {
     const [hours, setHours] = useState("--");
     const [minutes, setMinutes] = useState("--");
     const [seconds, setSeconds] = useState("--");
-    const [diff, setDiff] = useState(0);
 
     // UseEffect for refreshes
     useEffect(() => {
