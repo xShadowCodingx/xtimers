@@ -24,6 +24,7 @@ export default function CreateTimer(props: Props) {
     const [hours, setHours] = useState("--");
     const [minutes, setMinutes] = useState("--");
     const [seconds, setSeconds] = useState("--");
+    const [diff, setDiff] = useState(0);
 
     // UseEffect for refreshes
     useEffect(() => {
@@ -38,30 +39,52 @@ export default function CreateTimer(props: Props) {
 
             // If the days, hours, minutes, or seconds are less than 10, add a 0 in front to make it two digits
             if (daysLeft < 10) {
-                setDays('0' + daysLeft.toString());
+                if (daysLeft < 0) {
+                    setDays('00');
+                }
+                else {
+                    setDays('0' + daysLeft.toString());
+                };
             }
             else {
                 setDays(daysLeft.toString());
             };
             if (hoursLeft < 10) {
-                setHours('0' + hoursLeft.toString());
+                if (hoursLeft < 0) {
+                    setHours('00');
+                }
+                else {
+                    setHours('0' + hoursLeft.toString());
+                };
             }
             else {
                 setHours(hoursLeft.toString());
             };
             if (minutesLeft < 10) {
-                setMinutes('0' + minutesLeft.toString());
+                if (minutesLeft < 0) {
+                    setMinutes('00');
+                }
+                else {
+                    setMinutes('0' + minutesLeft.toString());
+                };
             }
             else {
                 setMinutes(minutesLeft.toString());
             };
             if (secondsLeft < 10) {
-                setSeconds('0' + secondsLeft.toString());
+                if (secondsLeft < 0) {
+                    setSeconds('00');
+                }
+                else {
+                    setSeconds('0' + secondsLeft.toString());
+                };
             }
             else {
                 setSeconds(secondsLeft.toString());
             };
+            console.log(difference);
         }, 1000);
+
 
         // Clear interval
         return () => clearInterval(interval);
